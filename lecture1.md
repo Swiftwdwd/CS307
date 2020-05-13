@@ -7,3 +7,12 @@
 * select
 * project
 * join
+![](operations.png)
+### key
+* Duplicates are forbidden in relational tables.
+* The value of the key must be different.
+* We choose the simplest key as PRIMARY KEY.
+### Normalization
+a process of standardize data.
+* 
+* 1NF: each solumn should only contain ONE piece of information.(So surname and first name should be stored in different columns.)
