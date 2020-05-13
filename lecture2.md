@@ -85,4 +85,38 @@ create table movies (movieid        int not null primary,
                       foreign key(country)
                                references countries(country_code))
 ```
-![ ](foreignkey)
+![ ](foreignkey.png)
+Creating tables requires
+* Proper modelling
+* Defining keys
+* Determining correct data types
+* Defining constraints
+## Insert
+```SQL
+insert into table_name
+     (list of columns)
+values (list of values)
+-- Values must match column-names one by one.If the column is mandatory, the INSERT statement fails.
+```
+for example
+```SQL
+insert into countries(country_code,
+country_name, continent)
+values('us', 'United States', 'AMERICA')
+-- SINGLE quote is the standard.
+-- If ' in values just double ' ('%''%').
+```
+### date
+* function
+```SQL
+to_date('07/20/1969',
+        'MM/DD/YYYY')
+-- Products support a default date format, and are able to automatically translate text that is inserted 
+-- into a date or datetime column if this text matched the default format. We shouldn't rely on this.
+```
+* computation
+#### current date
+```SQL
+CURRENT_DATE(no time)
+CURRENT_TIMESTAMP（time included)
+```
