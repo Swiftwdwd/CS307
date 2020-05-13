@@ -74,6 +74,7 @@ create table people ( peopleid   int not null
                       unique (first_name, surname)) --The first name and surname are unique in the table.
 ```
 * referential integrity
+![ ](countries.png)
 ```SQL
 create table movies (movieid        int not null primary,
                      title          varchar(60) not null,
@@ -84,3 +85,4 @@ create table movies (movieid        int not null primary,
                       foreign key(country)
                                references countries(country_code))
 ```
+![ ](foreignkey)
